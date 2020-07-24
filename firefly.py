@@ -26,10 +26,9 @@ class color:
 
 class config:
 	key = "" #go to https://numverify.com/
-
 def banner():
 	os.system('clear')
-	print  color.YELLOW + """
+	print( (color.YELLOW + """
 ███████╗██╗██████╗ ███████╗███████╗██╗  ██╗   ██╗
 ██╔════╝██║██╔══██╗██╔════╝██╔════╝██║  ╚██╗ ██╔╝
 █████╗  ██║██████╔╝█████╗  █████╗  ██║   ╚████╔╝ 
@@ -37,7 +36,7 @@ def banner():
 ██║     ██║██║  ██║███████╗██║     ███████╗██║   
 ╚═╝     ╚═╝╚═╝  ╚═╝╚══════╝╚═╝     ╚══════╝╚═╝
 	Version - dev-1.0                 
-	""" + color.END
+	""" + color.END))
 
 def main():
 	banner()
@@ -53,51 +52,51 @@ def main():
 		carrier = obj['carrier']
 		line_type = obj['line_type']
 
-		print color.YELLOW + "[+] " + color.END + "Phone number information gathering"
-		print "--------------------------------------"
+		print( color.YELLOW + "[+] " + color.END + "Phone number information gathering")
+		print( "--------------------------------------")
 		time.sleep(0.2)
 
 		if country_code == "":
-			print " - Getting Country		[ " + color.RED + "FAILED " + color.END + "]"
+			print( " - Getting Country		[ " + color.RED + "FAILED " + color.END + "]")
 		else:
-			print " - Getting Country		[ " + color.GREEN + "OK " + color.END + "]"
+			print( " - Getting Country		[ " + color.GREEN + "OK " + color.END + "]")
 
 		time.sleep(0.2)
 		if country_name == "":
-			print " - Getting Country Name		[ " + color.RED + "FAILED " + color.END + "]"
+			print( " - Getting Country Name		[ " + color.RED + "FAILED " + color.END + "]")
 		else:
-			print " - Getting Country Name		[ " + color.GREEN + "OK " + color.END + "]"
+			print( " - Getting Country Name		[ " + color.GREEN + "OK " + color.END + "]")
 
 		time.sleep(0.2)
 		if location == "":
-			print " - Getting Location		[ " + color.RED + "FAILED " + color.END + "]"
+			print( " - Getting Location		[ " + color.RED + "FAILED " + color.END + "]")
 		else:
-			print " - Getting Location		[ " + color.GREEN + "OK " + color.END + "]"
+			print( " - Getting Location		[ " + color.GREEN + "OK " + color.END + "]")
 
 		time.sleep(0.2)
 		if carrier == "":
-			print " - Getting Carrier		[ " + color.RED + "FAILED " + color.END + "]"
+			print( " - Getting Carrier		[ " + color.RED + "FAILED " + color.END + "]")
 		else:
-			print " - Getting Carrier		[ " + color.GREEN + "OK " + color.END + "]"
+			print( " - Getting Carrier		[ " + color.GREEN + "OK " + color.END + "]")
 
 		time.sleep(0.2)
 		if line_type == None:
-			print " - Getting Device		[ " + color.RED + "FAILED " + color.END + "]"
+			print( " - Getting Device		[ " + color.RED + "FAILED " + color.END + "]")
 		else:
-			print " - Getting Device		[ " + color.GREEN + "OK " + color.END + "]"
+			print( " - Getting Device		[ " + color.GREEN + "OK " + color.END + "]")
 
-		print ""
-		print color.YELLOW + "[+] " + color.END + "Information Output"
-		print "--------------------------------------"
-		print " - Phone number: " + str(number)
-		print " - Country: " + str(country_code)
-		print " - Country Name: " + str(country_name)
-		print " - Location: " + str(location)
-		print " - Carrier: " + str(carrier)
-		print " - Device: " + str(line_type)
+		print( "")
+		print( color.YELLOW + "[+] " + color.END + "Information Output")
+		print( "--------------------------------------")
+		print( " - Phone number: " + str(number))
+		print( " - Country: " + str(country_code))
+		print( " - Country Name: " + str(country_name))
+		print( " - Location: " + str(location))
+		print( " - Carrier: " + str(carrier))
+		print( " - Device: " + str(line_type))
 	else:
-		print "[?] Usage:"
-		print "	./%s <phone-number>" % (sys.argv[0])
-		print "	./%s +13213707446" % (sys.argv[0])
+		print( "[?] Usage:")
+		print( "	./%s <phone-number>" % (sys.argv[0]))
+		print( "	./%s +13213707446" % (sys.argv[0]))
 
 main()
